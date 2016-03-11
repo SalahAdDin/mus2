@@ -1,0 +1,76 @@
+@import "unit";
+/* CSS declarations go here */
+
+// Variables
+$light-gray: #ccc;
+
+$border-solid-light-gray: 1px solid $light-gray;
+
+// Globals
+
+html{
+  font-size: 16px;
+}
+
+body{
+  background: url("background.png") repeat center;
+}
+
+.container{
+  background: white;
+}
+
+.btn-toolbar {
+  margin: rem-calc(10 0);
+  > .btn-group{
+    margin-left: rem-calc(15);
+  }
+}
+
+.border-box{
+  border-radius: rem-calc(10);
+  border: $border-solid-light-gray;
+}
+
+// Main
+
+main{
+  >div:first-child{
+    >div:first-child{
+      a{
+        color: black;
+      }
+      .stop, .clock-o{
+        border-radius: 50% !important;
+      }
+      .backward{
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+      }
+      .forward{
+        border-bottom-right-radius: 50% !important;
+        border-top-right-radius: 50% !important;
+      }
+      .playback{
+        display: inline-block;
+        float: left;
+        width: 82%;
+        margin: rem-calc(7 0);
+        margin-right: rem-calc(5);
+      }
+    }
+  }
+  >div:last-child{
+    >div:first-child{
+      div:last-child{
+        @extend .border-box;
+      }
+      div{
+        div{
+          @extend .border-box;
+        }
+      }
+    }
+
+  }
+}
