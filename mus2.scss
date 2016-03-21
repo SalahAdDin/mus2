@@ -5,6 +5,7 @@
 $light-gray: #ccc;
 
 $border-solid-light-gray: 1px solid $light-gray;
+$border-solid-black: 1px solid black;
 
 // Globals
 
@@ -14,6 +15,11 @@ html{
 
 body{
   background: url("background.png") repeat center;
+}
+
+canvas{
+  // width: 100%;
+  // height: rem-calc(200);
 }
 
 .container{
@@ -71,6 +77,8 @@ main{
         }
       }
     }
-
+    >div:last-child{
+      border: $border-solid-black;
+    }
   }
 }
