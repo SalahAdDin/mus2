@@ -5,6 +5,10 @@
 <body>
 
 {{> score_info_form}}
+
+<div class="modal fade" tabindex="-1" role="form" id="signin_form">
+{{> atForm}}
+</div>
 <header class="container">{{> hello}}</header>
 <main class="container">
     <div class="row">
@@ -28,6 +32,16 @@
 </body>
 
 <template name="hello">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>{{> atNavButton}}</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h4>Welcome to Mus2 {{username}}!</h4>
     <button>Click Me</button>
     <p>You've pressed the button {{counter}} times.</p>
 </template>
@@ -140,7 +154,10 @@
                         <div class="form-group">
                             <label class="col-xs-2 control-label">Author</label>
                             <div class="col-xs-10">
-                                <input type="text" class="form-control" placeholder="Author" name="score_ath" required>
+                                <input type="text" class="form-control" placeholder="Author" name="score_ath"
+                                       value="{{getAuthor author}}" required>
+                                <!-- TODO: Obviously this doesn't works because score haven't author, is a new score, so, if score is new, get the currents user's usermane-->
+                                <!-- TODO: Put and if condition: if new or non now saved score, put currend session user ide instead author, else, put author-->
                             </div>
                         </div>
 

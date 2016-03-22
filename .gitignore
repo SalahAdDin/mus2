@@ -1,11 +1,9 @@
-/.meteor
-/packages
-/mus2.css
 # Created by .ignore support plugin (hsz.mobi)
-### Example user template template
-### Example user template
 
 # IntelliJ project files
+/.meteor
+/packages
+/client/mus2.css
 .idea
 *.iml
 out
